@@ -35,3 +35,7 @@ create policy "Users can update their own receipts"
 create policy "Users can delete their own receipts" 
   on public.receipts for delete 
   using (auth.uid() = user_id);
+
+-- Speeds up the per-user, date-ordered dashboard query.
+create index if not exists receipts_user_date_idx
+  on public.receipts (user_id, receipt_date desc);
