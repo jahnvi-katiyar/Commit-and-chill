@@ -5,7 +5,6 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Bill Baba — Receipt Intelligence',
   description: 'Scan receipts, understand spending, and stay ahead of your finances with Bill Baba.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
@@ -26,11 +25,9 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
+  // The UI is light-only; advertising dark would mismatch native controls.
+  colorScheme: 'light',
+  themeColor: '#7657f6',
 }
 
 export default function RootLayout({
