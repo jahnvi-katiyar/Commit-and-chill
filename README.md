@@ -36,7 +36,7 @@ cp .env.example .env.local        # Windows PowerShell: Copy-Item .env.example .
 npm run dev
 ```
 
-Open <http://localhost:3000>.
+Open http://localhost:3000>.
 
 The only thing you need to scan receipts is a **Gemini API key** (get one at <https://aistudio.google.com/apikey>). Supabase is optional — without it the app runs in [demo mode](#demo-mode).
 
